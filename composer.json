@@ -32,7 +32,10 @@
   "scripts": {
     "tester": [
       "tester -s -C tests/cases"
-    ]
+    ],
+    "coverage": [
+      "tester -s -C -d extension=xdebug.so --coverage ./coverage.xml --coverage-src ./src tests/cases"
+    ],
   },
   "prefer-stable": true,
   "minimum-stability": "dev"
