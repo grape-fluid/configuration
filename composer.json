@@ -35,7 +35,7 @@
     ],
     "coverage": [
       "tester -s -C -d extension=xdebug.so --coverage ./coverage.xml --coverage-src ./src tests/cases"
-    ],
+    ]
   },
   "prefer-stable": true,
   "minimum-stability": "dev"
