@@ -1,0 +1,2 @@
+test.string: [description: "Test string parameter"]
+test.string.secured: [description: "Test string secured parameter", secured: true]
