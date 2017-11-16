@@ -34,7 +34,7 @@
       "tester -s -C tests/cases"
     ],
     "coverage": [
-      "tester -s -C -d extension=xdebug.so --coverage ./.coverage.xml --coverage-src ./src tests/cases"
+      "tester -s -C -d zend_extension=xdebug.so --coverage ./tests/.coverage.xml --coverage-src ./src tests/cases"
     ]
   },
   "prefer-stable": true,

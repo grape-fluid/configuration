@@ -22,7 +22,7 @@ jobs:
         - composer run-script coverage
       after_script:
         - wget https://github.com/satooshi/php-coveralls/releases/download/v1.0.1/coveralls.phar
-        - php coveralls.phar --verbose
+        - php coveralls.phar -c tests/.coveralls.yml
 
   allow_failures:
     - stage: Test Coverage
