@@ -42,6 +42,8 @@ class ConfigurationExtension extends Nette\DI\CompilerExtension
 		$builder->addDefinition($this->prefix('repository'))
 			->setFactory(Repository::class)
 			->addSetup('loadConfiguration', [$configuration]);
+
+		$builder->addAlias('c', '@' . $this->prefix('repository'));
 	}
 
 }
