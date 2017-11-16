@@ -29,8 +29,10 @@ extensions:
 
 ```yaml
 services:
-    - Grapesc\GrapeFluid\Configuration\Storage\NetteDatabase('your_configuration_table_name') # Service that implements IStorage
-    - Grapesc\GrapeFluid\Configuration\Crypt\OpenSSLCrypt('your_secret_token') # Optional - Service that implements ICrypt
+    # Service that implements Grapesc\GrapeFluid\Configuration\IStorage
+    - Grapesc\GrapeFluid\Configuration\Storage\NetteDatabase('your_configuration_table_name')
+    # Optional - Service that implements Grapesc\GrapeFluid\Configuration\Crypt\ICrypt
+    - Grapesc\GrapeFluid\Configuration\Crypt\OpenSSLCrypt('your_secret_token')
 ```
 
 ## Example 
