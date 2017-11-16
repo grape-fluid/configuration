@@ -34,17 +34,17 @@ class Repository
 	/** @var array */
 	private $gettingCount = [];
 
-	/** @var ICrypt */
+	/** @var ICrypt|null */
 	private $crypt;
 
 
 	/**
 	 * Repository constructor.
 	 * @param IStorage $storage
-	 * @param ICrypt $crypt
+	 * @param ICrypt|null $crypt
 	 * @param ICacheStorage|null $cacheStorage
 	 */
-	public function __construct(IStorage $storage, ICrypt $crypt, ICacheStorage $cacheStorage = null)
+	public function __construct(IStorage $storage, ICrypt $crypt = null, ICacheStorage $cacheStorage = null)
 	{
 		$this->storage      = $storage;
 		$this->crypt        = $crypt;
@@ -174,6 +174,10 @@ class Repository
 	protected function checkStorageConsistency()
 	{
 		foreach ($this->parameters AS $parameter) {
+			if ($parameter->secured AND is_null($this->crypt)) {
+				throw new \InvalidArgumentException(sprintf("Trying to register secured parameter '%s', but service of instance %s is not registered.", $parameter->tid, ICrypt::class));
+			}
+
 			if (!$this->storage->hasParameter($parameter)) {
 				$this->storage->newParameter($parameter);
 			} else {

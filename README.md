@@ -21,17 +21,16 @@ composer require grape-fluid/configuration
 ## Registration
 
 ```yaml
-parameters:
-    secret: a§?g6a4gA!Gl9UR3P
-    configurationTable: table_configuration
-    
-services:
-    c: @configuration.repository
-    - Grapesc\GrapeFluid\Configuration\Crypt\OpenSSLCrypt(%secret%)
-    - Grapesc\GrapeFluid\Configuration\Storage\NetteDatabase(%configurationTable%)
-
 extensions:
     configuration: Grapesc\GrapeFluid\Configuration\Bridges\ConfigurationDI\ConfigurationExtension
+```
+
+## Advanced settings
+
+```yaml
+services:
+    - Grapesc\GrapeFluid\Configuration\Storage\NetteDatabase('your_configuration_table_name') # Service that implements IStorage
+    - Grapesc\GrapeFluid\Configuration\Crypt\OpenSSLCrypt('your_secret_token') # Optional - Service that implements ICrypt
 ```
 
 ## Example 
