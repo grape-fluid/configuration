@@ -1,12 +1,13 @@
 # GrapeFluid/Configuration
 
+[![PHP from Packagist](https://img.shields.io/packagist/php-v/grape-fluid/configuration.svg?style=flat-square)](https://packagist.org/packages/grape-fluid/configuration)
 [![Build Status](https://img.shields.io/travis/grape-fluid/configuration.svg?style=flat-square)](https://travis-ci.org/grape-fluid/configuration)
 [![Code coverage](https://img.shields.io/coveralls/grape-fluid/configuration.svg?style=flat-square)](https://coveralls.io/r/grape-fluid/configuration)
 [![Licence](https://img.shields.io/packagist/l/grape-fluid/configuration.svg?style=flat-square)](https://packagist.org/packages/grape-fluid/configuration)
-
 [![Downloads this Month](https://img.shields.io/packagist/dm/grape-fluid/configuration.svg?style=flat-square)](https://packagist.org/packages/grape-fluid/configuration)
 [![Downloads total](https://img.shields.io/packagist/dt/grape-fluid/configuration.svg?style=flat-square)](https://packagist.org/packages/grape-fluid/configuration)
 [![Latest stable](https://img.shields.io/packagist/v/grape-fluid/configuration.svg?style=flat-square)](https://packagist.org/packages/grape-fluid/configuration)
+
 
 ## Install
 
